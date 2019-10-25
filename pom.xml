@@ -1,0 +1,171 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>test</groupId>
+  <artifactId>test</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>test Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <!-- 定义spring的统一版本信息 -->
+  <properties>
+    <spring.version>5.2.0.RELEASE</spring.version>
+  </properties>
+  <dependencies>
+    <!-- 包含Spring 框架基本的核心工具类。 Spring 其它组件要都要使用到这个包里的类， 是其它组件的基本核心 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <!-- 统一版本，我们只需要调用上面的版本信息即可 -->
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- 所有应用都要用到的，它包含访问配置文件、创建和管理bean 以及进行（IoC/DI）操作相关的所有类 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- 为Spring 核心提供了大量扩展。可以找到使用Spring ApplicationContext特性时所需的全部类，
+    JDNI所需的全部类，instrumentation组件以及校验Validation 方面的相关类。 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- 为JDBC、Hibernate、JDO、JPA等提供的一致的声明式和编程式事务管理 -->
+      <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- 包含对Spring 对JDBC 数据访问进行封装的所有类。 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- Spring web 包含Web应用开发时，用到Spring框架时所需的核心类，包括自动载入WebApplicationContext
+              特性的类、Struts与JSF集成类、文件上传的支持类、Filter类和大量工具辅助类。 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- 包含SpringMVC框架相关的所有类。 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- Spring test 对JUNIT等测试框架的简单封装 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- JUnit单元测试框架 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- 引入mybatis相关jar包 -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.2</version>
+    </dependency>
+    <!-- 引入mybatis-spring目的是为了让mybatis与spring框架进行衔接 -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>2.0.2</version>
+    </dependency>
+    <!-- 数据库连接池、驱动 -->
+	<!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+	<dependency>
+	    <groupId>com.mchange</groupId>
+	    <artifactId>c3p0</artifactId>
+	    <version>0.9.5</version>
+	</dependency>
+	<!-- mysql -->
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.15</version>
+	</dependency>
+	<dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>1.4</version>
+    </dependency>
+    <dependency>
+        <groupId>commons-pool</groupId>
+        <artifactId>commons-pool</artifactId>
+        <version>1.6</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/jstl/jstl -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	<!-- 不提供servlet，jsp页面会报错 -->
+	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+    <dependency>  
+        <groupId>log4j</groupId>  
+        <artifactId>log4j</artifactId>  
+        <version>1.2.17</version>  
+    </dependency> 
+    <!-- jackon依赖 -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.10.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.10.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>2.10.0</version>
+     </dependency>
+     <!-- 文件上传 -->
+     
+     <dependency>
+    	<groupId>commons-io</groupId>
+    	<artifactId>commons-io</artifactId>
+    	<version>2.6</version>
+     </dependency>
+     <dependency>
+    	<groupId>commons-fileupload</groupId>
+    	<artifactId>commons-fileupload</artifactId>
+    	<version>1.3.3</version>
+     </dependency>
+  </dependencies>
+  <build>
+    <resources>
+    <!--指定src main java下所有的目录下的xml文件都编译-->
+      <resource>
+      <directory>src/main/java</directory>   
+      <includes>
+      <include>**/*.xml</include>
+      </includes>
+      </resource>
+    </resources>
+    <finalName>test</finalName>
+  </build>
+</project>
