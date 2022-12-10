@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <!-- 定义spring的统一版本信息 -->
   <properties>
-    <spring.version>5.2.0.RELEASE</spring.version>
+    <spring.version>6.0.0</spring.version>
   </properties>
   <dependencies>
     <!-- 包含Spring 框架基本的核心工具类。 Spring 其它组件要都要使用到这个包里的类， 是其它组件的基本核心 -->
